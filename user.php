@@ -11,7 +11,7 @@ if(isset($_POST['submit'])){
   $mobile=$_POST['mobile'];
   $password=$_POST['password'];
 
-  $sql="insert into `users`(name,email,mobile,password) values ('$name','$email',$mobile,'$password')";
+  $sql="INSERT  into users(name,email,mobile,password) values ('$name','$email',$mobile,'$password')";
 
   $result=mysqli_query($con,$sql);  
   if(!$result){
@@ -58,12 +58,7 @@ if(isset($_POST['submit'])){
       <input type="password" class="form-control" placeholder="Enter password"autocomplete="off" name="password">
     </div>
 
-   
-    <div class="form-check mb-3">
-      <label class="form-check-label">
-        <input class="form-check-input" type="checkbox" name="remember"> Remember me
-      </label>
-    </div>
+    
     <button type="submit" name="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>
